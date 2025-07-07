@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Primary Meta Tags -->
+    <title>E-Rythm - Download Islamic Songs, Nasheeds & Quran Recitations</title>
+    <meta name="title" content="E-Rythm - Download Islamic Songs, Nasheeds & Quran Recitations">
+    <meta name="description" content="Download high quality Islamic nasheeds, Quran recitations, and devotional songs. Largest collection of halal music for Muslims worldwide.">
+    <meta name="keywords" content="Islamic songs, nasheeds, Quran mp3, Islamic music download, halal music, Muslim songs, devotional songs">
+    <meta name="author" content="E-Rythm">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://e-rythm.com/">
+    <meta property="og:title" content="E-Rythm - Download Islamic Songs, Nasheeds & Quran Recitations">
+    <meta property="og:description" content="Download high quality Islamic nasheeds, Quran recitations, and devotional songs.">
+    <meta property="og:image" content="https://e-rythm.com/images/social-banner.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://e-rythm.com/">
+    <meta property="twitter:title" content="E-Rythm - Download Islamic Songs, Nasheeds & Quran Recitations">
+    <meta property="twitter:description" content="Download high quality Islamic nasheeds, Quran recitations, and devotional songs.">
+    <meta property="twitter:image" content="https://e-rythm.com/images/social-banner.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://e-rythm.com/">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Islamic Calligraphy Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Amiri', serif;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+        }
+
+        /* Navigation */
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .main-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .main-nav a:hover {
+            background-color: #34495e;
+        }
+
+        /* Search Box */
+        .search-box {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .search-box button {
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* Mobile Menu Toggle - Hidden by default */
+        .mobile-menu-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/banner.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Music Grid */
+        .music-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px 0;
+        }
+
+        .music-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .music-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 30px 0;
+            margin-top: 30px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            header .container {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
+
+            .search-box {
+                width: 100%;
+                margin: 15px 0;
+            }
+
+            .main-nav {
+                width: 100%;
+                display: none;
+            }
+
+            .main-nav.active {
+                display: block;
+            }
+
+            .main-nav ul {
+                flex-direction: column;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+                position: absolute;
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        @media (min-width: 993px) {
+            header .container {
+                display: flex;
+                align-items: center;
+            }
+
+            .main-nav {
+                margin: 0 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="E-Rythm Logo">
+                <h1>E-Rythm</h1>
+            </div>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#nasheeds">Nasheeds</a></li>
+                    <li><a href="#quran">Quran Recitations</a></li>
+                    <li><a href="#duas">Duas</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="Search nasheeds...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Discover Beautiful Islamic Music</h2>
+            <p>Download high quality nasheeds, Quran recitations and devotional songs</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="featured">
+            <h2>Featured Nasheeds</h2>
+            <div class="music-grid">
+                <!-- Music cards would be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 E-Rythm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+            document.querySelector('.main-nav').classList.toggle('active');
+        });
+
+        // Responsive Adjustments
+        function handleResponsive() {
+            const screenWidth = window.innerWidth;
+            const searchBox = document.querySelector('.search-box');
+            
+            if (screenWidth > 992) {
+                // Desktop styles
+                if (document.querySelector('.main-nav').classList.contains('active')) {
+                    document.querySelector('.main-nav').classList.remove('active');
+                }
+            }
+        }
+
+        // Initial call
+        handleResponsive();
+
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResponsive);
+
+        // Sample music data loading (would be replaced with actual API calls)
+        document.addEventListener('DOMContentLoaded', function() {
+            const musicGrid = document.querySelector('.music-grid');
+            
+            // Sample data - in a real app, this would come from an API
+            const sampleMusic = [
+                { title: "Tala'al Badru", artist: "Maher Zain", cover: "images/album1.jpg" },
+                { title: "Ramadan", artist: "Mesut Kurtis", cover: "images/album2.jpg" },
+                { title: "Salam Alaikum", artist: "Harris J", cover: "images/album3.jpg" },
+                { title: "The Way of the Tears", artist: "Sami Yusuf", cover: "images/album4.jpg" }
+            ];
+
+            // Create music cards
+            sampleMusic.forEach(song => {
+                const card = document.createElement('div');
+                card.className = 'music-card';
+                card.innerHTML = `
+                    <img src="${song.cover}" alt="${song.title}" style="width:100%">
+                    <div style="padding:15px">
+                        <h3>${song.title}</h3>
+                        <p>${song.artist}</p>
+                        <button class="download-btn">Download</button>
+                    </div>
+                `;
+                musicGrid.appendChild(card);
+            });
+
+            // Add download functionality
+            document.querySelectorAll('.download-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('Download would start here in a real implementation');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
